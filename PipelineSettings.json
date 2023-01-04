@@ -34,7 +34,7 @@
                 "MutagenVersion": "0.39.6",
                 "SynthesisVersion": "0.24.1"
               },
-              "On": true,
+              "On": false,
               "Nickname": "FO4ClarityPatch"
             },
             {
@@ -60,7 +60,7 @@
                 "MutagenVersion": "0.39.6",
                 "SynthesisVersion": "0.24.1"
               },
-              "On": true,
+              "On": false,
               "Nickname": "FO4ECOPatch"
             },
             {
