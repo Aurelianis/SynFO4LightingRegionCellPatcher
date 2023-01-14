@@ -106,7 +106,7 @@
               "SynthesisVersionType": "Profile",
               "ManualSynthesisVersion": "",
               "LastSuccessfulRun": null,
-              "On": true,
+              "On": false,
               "Nickname": "FOLIP Synth"
             },
             {
@@ -126,7 +126,7 @@
               "SynthesisVersionType": "Profile",
               "ManualSynthesisVersion": "",
               "LastSuccessfulRun": null,
-              "On": false,
+              "On": true,
               "Nickname": "HasDistantLOD Synth"
             }
           ],
