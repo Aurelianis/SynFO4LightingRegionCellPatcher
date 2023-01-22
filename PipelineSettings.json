@@ -115,7 +115,7 @@
               "RemoteRepoPath": "https://github.com/DoubleYouC/HasDistantLOD",
               "SelectedProjectSubpath": "HasDistantLOD\\HasDistantLOD.csproj",
               "PatcherVersioning": "Branch",
-              "TargetTag": "",
+              "TargetTag": null,
               "TargetCommit": "72a28cee6c6bfd528ebf85b8ef5f918ff5bbc790",
               "TargetBranch": "master",
               "LatestTag": true,
@@ -125,7 +125,13 @@
               "ManualMutagenVersion": "",
               "SynthesisVersionType": "Profile",
               "ManualSynthesisVersion": "",
-              "LastSuccessfulRun": null,
+              "LastSuccessfulRun": {
+                "TargetRepo": "https://github.com/DoubleYouC/HasDistantLOD",
+                "ProjectSubpath": "HasDistantLOD\\HasDistantLOD.csproj",
+                "Commit": "72a28cee6c6bfd528ebf85b8ef5f918ff5bbc790",
+                "MutagenVersion": "0.39.6",
+                "SynthesisVersion": "0.24.1"
+              },
               "On": true,
               "Nickname": "HasDistantLOD Synth"
             }
