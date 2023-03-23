@@ -94,7 +94,7 @@
                 "MutagenVersion": "0.40.0",
                 "SynthesisVersion": "0.25.3"
               },
-              "On": false,
+              "On": true,
               "Nickname": "FOLIP"
             }
           ],
@@ -102,7 +102,7 @@
           "BlacklistedMods": []
         },
         {
-          "On": true,
+          "On": false,
           "Name": "Synthesis-Weightless",
           "Patchers": [
             {
@@ -128,7 +128,7 @@
                 "MutagenVersion": "0.40.0",
                 "SynthesisVersion": "0.25.3"
               },
-              "On": true,
+              "On": false,
               "Nickname": "MakeItemsWeightless"
             },
             {
@@ -174,7 +174,7 @@
                 "MutagenVersion": "0.40.0",
                 "SynthesisVersion": "0.25.3"
               },
-              "On": true,
+              "On": false,
               "Nickname": "MakeModsScrappable"
             }
           ],
