@@ -4,16 +4,16 @@
     {
       "$type": "Synthesis.Bethesda.Execution.Settings.V2.SynthesisProfile, Synthesis.Bethesda.Execution",
       "Nickname": "Fallout 4",
-      "ID": "juescijt.jzy",
+      "ID": "5zmczde4.xiu",
       "TargetRelease": "Fallout4",
       "Groups": [
         {
-          "On": true,
-          "Name": "Synthesis",
+          "On": false,
+          "Name": "Synthesis-Clarity",
           "Patchers": [
             {
               "$type": "Synthesis.Bethesda.Execution.Settings.GithubPatcherSettings, Synthesis.Bethesda.Execution",
-              "ID": "smpwuqhw.lek",
+              "ID": "mvkrpgba.o4r",
               "RemoteRepoPath": "https://github.com/tstavrianos/FO4ClarityPatch",
               "SelectedProjectSubpath": "FO4ClarityPatch\\FO4ClarityPatch.csproj",
               "PatcherVersioning": "Branch",
@@ -23,100 +23,36 @@
               "LatestTag": true,
               "FollowDefaultBranch": true,
               "AutoUpdateToBranchTip": false,
-              "MutagenVersionType": "Latest",
+              "MutagenVersionType": "Profile",
               "ManualMutagenVersion": "",
-              "SynthesisVersionType": "Latest",
+              "SynthesisVersionType": "Profile",
               "ManualSynthesisVersion": "",
               "LastSuccessfulRun": {
                 "TargetRepo": "https://github.com/tstavrianos/FO4ClarityPatch",
                 "ProjectSubpath": "FO4ClarityPatch\\FO4ClarityPatch.csproj",
                 "Commit": "ac2fce6db2950688535c02b09b12687ffcb92612",
-                "MutagenVersion": "0.39.6",
-                "SynthesisVersion": "0.24.1"
+                "MutagenVersion": "0.40.0",
+                "SynthesisVersion": "0.25.3"
               },
               "On": false,
               "Nickname": "FO4ClarityPatch"
-            },
+            }
+          ],
+          "Expanded": true,
+          "BlacklistedMods": []
+        },
+        {
+          "On": true,
+          "Name": "Synthesis-FOLIP",
+          "Patchers": [
             {
               "$type": "Synthesis.Bethesda.Execution.Settings.GithubPatcherSettings, Synthesis.Bethesda.Execution",
-              "ID": "d53zecsa.goe",
-              "RemoteRepoPath": "https://github.com/tstavrianos/FO4ECOPatch",
-              "SelectedProjectSubpath": "FO4ECOPatch\\FO4ECOPatch.csproj",
-              "PatcherVersioning": "Branch",
-              "TargetTag": null,
-              "TargetCommit": "80b5a481dace73dc5e8401185deb6fc1c814f6c0",
-              "TargetBranch": "main",
-              "LatestTag": true,
-              "FollowDefaultBranch": true,
-              "AutoUpdateToBranchTip": false,
-              "MutagenVersionType": "Latest",
-              "ManualMutagenVersion": "",
-              "SynthesisVersionType": "Latest",
-              "ManualSynthesisVersion": "",
-              "LastSuccessfulRun": {
-                "TargetRepo": "https://github.com/tstavrianos/FO4ECOPatch",
-                "ProjectSubpath": "FO4ECOPatch\\FO4ECOPatch.csproj",
-                "Commit": "80b5a481dace73dc5e8401185deb6fc1c814f6c0",
-                "MutagenVersion": "0.39.6",
-                "SynthesisVersion": "0.24.1"
-              },
-              "On": false,
-              "Nickname": "FO4ECOPatch"
-            },
-            {
-              "$type": "Synthesis.Bethesda.Execution.Settings.GithubPatcherSettings, Synthesis.Bethesda.Execution",
-              "ID": "mto5ddof.bus",
-              "RemoteRepoPath": "https://github.com/praecipitator/ItemAutoTagger",
-              "SelectedProjectSubpath": "ItemTagger\\ItemTagger.csproj",
-              "PatcherVersioning": "Branch",
-              "TargetTag": null,
-              "TargetCommit": "bf09df1a14344e8f71c92f4cd26e2e0e305ae922",
-              "TargetBranch": "main",
-              "LatestTag": true,
-              "FollowDefaultBranch": true,
-              "AutoUpdateToBranchTip": false,
-              "MutagenVersionType": "Latest",
-              "ManualMutagenVersion": "",
-              "SynthesisVersionType": "Latest",
-              "ManualSynthesisVersion": "",
-              "LastSuccessfulRun": {
-                "TargetRepo": "https://github.com/praecipitator/ItemAutoTagger",
-                "ProjectSubpath": "ItemTagger\\ItemTagger.csproj",
-                "Commit": "bf09df1a14344e8f71c92f4cd26e2e0e305ae922",
-                "MutagenVersion": "0.39.6",
-                "SynthesisVersion": "0.24.1"
-              },
-              "On": false,
-              "Nickname": "ItemAutoTagger"
-            },
-            {
-              "$type": "Synthesis.Bethesda.Execution.Settings.GithubPatcherSettings, Synthesis.Bethesda.Execution",
-              "ID": "ndnvaead.kmp",
-              "RemoteRepoPath": "https://github.com/DoubleYouC/FOLIP",
-              "SelectedProjectSubpath": "FOLIP\\FOLIP.csproj",
-              "PatcherVersioning": "Branch",
-              "TargetTag": null,
-              "TargetCommit": "fdd4b625d208b0b0f92e9e44d90aabaea49ca97c",
-              "TargetBranch": "master",
-              "LatestTag": true,
-              "FollowDefaultBranch": true,
-              "AutoUpdateToBranchTip": false,
-              "MutagenVersionType": "Profile",
-              "ManualMutagenVersion": "",
-              "SynthesisVersionType": "Profile",
-              "ManualSynthesisVersion": "",
-              "LastSuccessfulRun": null,
-              "On": false,
-              "Nickname": "FOLIP Synth"
-            },
-            {
-              "$type": "Synthesis.Bethesda.Execution.Settings.GithubPatcherSettings, Synthesis.Bethesda.Execution",
-              "ID": "okgs4ddf.mn4",
+              "ID": "vgsqtomu.kdw",
               "RemoteRepoPath": "https://github.com/DoubleYouC/HasDistantLOD",
               "SelectedProjectSubpath": "HasDistantLOD\\HasDistantLOD.csproj",
               "PatcherVersioning": "Branch",
               "TargetTag": null,
-              "TargetCommit": "72a28cee6c6bfd528ebf85b8ef5f918ff5bbc790",
+              "TargetCommit": "056d8b7ff48bb3a2969705644d7a044d9b262576",
               "TargetBranch": "master",
               "LatestTag": true,
               "FollowDefaultBranch": true,
@@ -128,12 +64,38 @@
               "LastSuccessfulRun": {
                 "TargetRepo": "https://github.com/DoubleYouC/HasDistantLOD",
                 "ProjectSubpath": "HasDistantLOD\\HasDistantLOD.csproj",
-                "Commit": "72a28cee6c6bfd528ebf85b8ef5f918ff5bbc790",
-                "MutagenVersion": "0.39.6",
-                "SynthesisVersion": "0.24.1"
+                "Commit": "056d8b7ff48bb3a2969705644d7a044d9b262576",
+                "MutagenVersion": "0.40.0",
+                "SynthesisVersion": "0.25.3"
               },
               "On": true,
-              "Nickname": "HasDistantLOD Synth"
+              "Nickname": "HasDistantLOD"
+            },
+            {
+              "$type": "Synthesis.Bethesda.Execution.Settings.GithubPatcherSettings, Synthesis.Bethesda.Execution",
+              "ID": "fp5aq2o1.nu3",
+              "RemoteRepoPath": "https://github.com/DoubleYouC/FOLIP",
+              "SelectedProjectSubpath": "FOLIP\\FOLIP.csproj",
+              "PatcherVersioning": "Branch",
+              "TargetTag": null,
+              "TargetCommit": "b81116717a45f9d033f50f3f2373d1b215ddda48",
+              "TargetBranch": "master",
+              "LatestTag": true,
+              "FollowDefaultBranch": true,
+              "AutoUpdateToBranchTip": false,
+              "MutagenVersionType": "Profile",
+              "ManualMutagenVersion": "",
+              "SynthesisVersionType": "Profile",
+              "ManualSynthesisVersion": "",
+              "LastSuccessfulRun": {
+                "TargetRepo": "https://github.com/DoubleYouC/FOLIP",
+                "ProjectSubpath": "FOLIP\\FOLIP.csproj",
+                "Commit": "b81116717a45f9d033f50f3f2373d1b215ddda48",
+                "MutagenVersion": "0.40.0",
+                "SynthesisVersion": "0.25.3"
+              },
+              "On": true,
+              "Nickname": "FOLIP"
             }
           ],
           "Expanded": true,
@@ -141,9 +103,9 @@
         }
       ],
       "MutagenVersioning": "Manual",
-      "MutagenManualVersion": "0.39.6",
+      "MutagenManualVersion": "0.40.0",
       "SynthesisVersioning": "Manual",
-      "SynthesisManualVersion": "0.24.1",
+      "SynthesisManualVersion": "0.25.3",
       "DataPathOverride": null,
       "ConsiderPrereleaseNugets": false,
       "LockToCurrentVersioning": false,
