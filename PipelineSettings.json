@@ -36,13 +36,6 @@
               },
               "On": false,
               "Nickname": "FO4ClarityPatch"
-            },
-            {
-              "$type": "Synthesis.Bethesda.Execution.Settings.SolutionPatcherSettings, Synthesis.Bethesda.Execution",
-              "SolutionPath": "D:\\FO4Tools\\Synthesis\\Data\\Fallout 4\\AURCellPatcher\\Forward Cell Edits\\Forward Cell Edits.sln",
-              "ProjectSubpath": "ForwardCellEdits\\ForwardCellEdits.csproj",
-              "On": true,
-              "Nickname": "Cell Patcher"
             }
           ],
           "Expanded": true,
@@ -295,6 +288,21 @@
           "On": false,
           "Name": "Synthesis - Region Names",
           "Patchers": [],
+          "Expanded": true,
+          "BlacklistedMods": []
+        },
+        {
+          "On": true,
+          "Name": "Synthesis - Cell Patch",
+          "Patchers": [
+            {
+              "$type": "Synthesis.Bethesda.Execution.Settings.SolutionPatcherSettings, Synthesis.Bethesda.Execution",
+              "SolutionPath": "D:\\FO4Tools\\Synthesis\\Data\\Fallout 4\\AURCellPatcher\\Forward Cell Edits\\Forward Cell Edits.sln",
+              "ProjectSubpath": "ForwardCellEdits\\ForwardCellEdits.csproj",
+              "On": true,
+              "Nickname": "Cell Patcher"
+            }
+          ],
           "Expanded": true,
           "BlacklistedMods": []
         }
