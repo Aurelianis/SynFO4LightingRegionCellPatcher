@@ -42,8 +42,8 @@
           "BlacklistedMods": []
         },
         {
-          "On": false,
-          "Name": "Synthesis-FOLIP",
+          "On": true,
+          "Name": "Synthesis-HasDistantLOD",
           "Patchers": [
             {
               "$type": "Synthesis.Bethesda.Execution.Settings.GithubPatcherSettings, Synthesis.Bethesda.Execution",
@@ -68,7 +68,7 @@
                 "MutagenVersion": "0.40.0",
                 "SynthesisVersion": "0.25.3"
               },
-              "On": false,
+              "On": true,
               "Nickname": "HasDistantLOD"
             },
             {
@@ -94,7 +94,7 @@
                 "MutagenVersion": "0.40.0",
                 "SynthesisVersion": "0.25.3"
               },
-              "On": true,
+              "On": false,
               "Nickname": "FOLIP"
             }
           ],
