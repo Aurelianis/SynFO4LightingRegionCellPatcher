@@ -1,4 +1,4 @@
-# Synthesis
+# Synthesis Fallout 4 Lighting & Region Cell Patcher
 
 This patcher will forward Region and Lighting info in cell headers for the following mods (you don't have to have all of them for this to work):
 
