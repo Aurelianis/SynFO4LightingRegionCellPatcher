@@ -13,3 +13,5 @@ JSRS Sound Mod for Fallout 4 (Optional Regions file) - https://www.nexusmods.com
 David Hunter - A Brotherhood Story (A couple of lighting entries and encounter zones are forwarded) - https://www.nexusmods.com/fallout4/mods/16808
 
 It will also keep the previsibines from PRP and any patches as long as your load order is correct. 
+
+NOTE: Synthesis does not suppor the Compressed flag on cell records. I've included SetCompressedFlagOnCells.pas which is an xEdit script that will flag them. 
