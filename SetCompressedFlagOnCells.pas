@@ -18,7 +18,8 @@ begin
 
   // comment this out if you don't want those messages
   AddMessage('Processing: ' + FullPath(e));
-
+  if Signature(e) <> 'CELL' then
+    Exit;
   SetElementNativeValues(e, 'Record Header\Record Flags', $40000);
 
 end;
