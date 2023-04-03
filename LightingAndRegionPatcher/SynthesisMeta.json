@@ -1,0 +1,10 @@
+{
+  "Nickname": "SynFO4LightingRegionCellPatcher",
+  "Visibility": "Visible",
+  "OneLineDescription": "Lighting and Region name cell patcher for FO4",
+  "LongDescription": "Forwards Lighting and Region Cell info from Ultra Interior Lighting, Clarity, Region Names on Save Files, JSRS Regions and BoS Story",
+  "PreferredAutoVersioning": "Default",
+  "TargetedReleases": [
+    "Fallout4"
+  ]
+}
