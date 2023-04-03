@@ -14,7 +14,7 @@ David Hunter - A Brotherhood Story (A couple of lighting entries and encounter z
 
 It will also keep the previsibines from PRP and any patches as long as your load order is correct. 
 
-NOTE: Synthesis does not support the Compressed flag on cell records. I've included SetCompressedFlagOnCells.pas which is an xEdit script that will flag them. 
+NOTE: Synthesis does not support the Compressed flag on cell records. I've included SetCompressedFlagOnCells.pas which is an xEdit script that will flag them. When you run this be sure to remove the flag from the top level worldspaces (commonwealth, etc). It will be <unknown 18>.
 
 ![image](https://user-images.githubusercontent.com/109992824/229530429-dde871cc-4baa-41f9-9170-284633a6238e.png)
 
