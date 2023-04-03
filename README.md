@@ -1,6 +1,6 @@
 # Synthesis
 
-This patcher will forward Region and Lighting info in cell headers for the following mods:
+This patcher will forward Region and Lighting info in cell headers for the following mods (you don't have to have all of them for this to work):
 
 Ultra Interior Lighting https://www.nexusmods.com/fallout4/mods/22101
 
@@ -12,4 +12,4 @@ JSRS Sound Mod for Fallout 4 (Optional Regions file) - https://www.nexusmods.com
 
 David Hunter - A Brotherhood Story (A couple of lighting entries and encounter zones are forwarded) - https://www.nexusmods.com/fallout4/mods/16808
 
-It will also keep the previsibines from PRP and any patches as long as your load order is correct.
+It will also keep the previsibines from PRP and any patches as long as your load order is correct. 
