@@ -232,19 +232,18 @@ namespace LightingAndRegionPatcher
                 var dca = state.LoadOrder.GetIfEnabled(DiamondCityAmbiance.ModKey);
                 if (dca.Mod != null)
                 {
-                    Console.WriteLine($"Processing {DiamondCityAmbiance.ModKey}");
+                    Console.WriteLine($"Processing {dca.ModKey}");
                     foreach (var dcaContext in dca.Mod.EnumerateMajorRecordContexts<ICell, ICellGetter>(state.LinkCache))
                     {
                         var dcaCell = dcaContext.Record;
-
                         if (dcaContext.Record.Regions != null)
                         {
-                            var dcaRecords = dcaContext.Record.Regions;
-                            if (dcaRecords.Count > 0)
+                            var regionRecords = dcaContext.Record.Regions;
+                            if (regionRecords.Count > 0)
                             {
-                                if (state.LinkCache.TryResolveContext<ICell, ICellGetter>(dcaContext.Record.FormKey, out var dcaWinner))
+                                if (state.LinkCache.TryResolveContext<ICell, ICellGetter>(dcaContext.Record.FormKey, out var regionWinner))
                                 {
-                                    var dcaWinnerCell = dcaWinner.Record;
+                                    var dcaWinnerCell = regionWinner.Record;
                                     if (dcaWinnerCell.Regions != null)
                                     {
                                         // Check if Regions is already the winning record.
@@ -254,13 +253,15 @@ namespace LightingAndRegionPatcher
                                             continue;
                                         }
                                     }
-                                    var dcaCellOverride = dcaWinner.GetOrAddAsOverride(state.PatchMod);
+                                    var dcaCellOverride = regionWinner.GetOrAddAsOverride(state.PatchMod);
                                     if (dcaCellOverride.Regions != null)
                                     {
+                                        //Add only region records that are unique so that there are no duplicates
                                         dcaCellOverride.Regions.AddRangeIfUnique(dcaContext.Record.Regions);
+
                                         //Compressed flag is removed, so need to make sure it is added back
                                         //Note Synthesis does not currently support this so commenting out for now
-                                        //dcaCellOverride.Fallout4MajorRecordFlags = dcaCellOverride.Fallout4MajorRecordFlags.SetFlag(Cell.Fallout4MajorRecordFlag.Compressed, true);
+                                        // dcaCellOverride.MajorFlags.SetFlag(Cell.Fallout4MajorRecordFlag.Compressed, true);
                                     }
                                 }
                             }
