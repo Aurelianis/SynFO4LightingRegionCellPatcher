@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace LightingAndRegionPatcher
 {
-    public static class DiamondCityAmbiance
+    public static class DiamondCityAmbience
     {
-        public static readonly ModKey ModKey = ModKey.FromNameAndExtension("DiamondCityAmbiance.esp");
+        public static readonly ModKey ModKey = ModKey.FromNameAndExtension("DiamondCityAmbience.esp");
     }
 }

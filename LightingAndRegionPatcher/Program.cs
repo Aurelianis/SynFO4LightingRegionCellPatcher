@@ -21,7 +21,7 @@ namespace LightingAndRegionPatcher
             bool uilActive = state.LoadOrder.ContainsKey(UltraInteriorLighting.ModKey);
             bool regionsActive = state.LoadOrder.ContainsKey(RegionNames.ModKey);
             bool jsrsRegionsActive = state.LoadOrder.ContainsKey(JSRSRegions.ModKey);
-            bool dcaRegionsActive = state.LoadOrder.ContainsKey(DiamondCityAmbiance.ModKey);
+            bool dcaRegionsActive = state.LoadOrder.ContainsKey(DiamondCityAmbience.ModKey);
             bool bosStoryActive = state.LoadOrder.ContainsKey(BOSStory.ModKey);
 
             //If Ultra Interior Lighting is Enabled, forward cell lighting records
@@ -229,7 +229,7 @@ namespace LightingAndRegionPatcher
             //If Diamond City Ambiance is Enabled, forward Unique region records
             if (dcaRegionsActive)
             {
-                var dca = state.LoadOrder.GetIfEnabled(DiamondCityAmbiance.ModKey);
+                var dca = state.LoadOrder.GetIfEnabled(DiamondCityAmbience.ModKey);
                 if (dca.Mod != null)
                 {
                     Console.WriteLine($"Processing {dca.ModKey}");
