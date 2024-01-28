@@ -8,13 +8,6 @@ namespace LightingAndRegionPatcher
 {
     public class Program
     {
-        //Name of all ESPs that are patched - no longer used
-        /*const string ClarityEspName = "Clarity.esp";
-        const string UILEspName = "UltraInteriorLighting.esp";
-        const string RegionEspName = "Region Names on Save Files.esp";
-        const string JSRSRegionEspName = "JSRS_Regions.esp";
-        const string BoSStoryEspName = "BoSStory.esp";*/
-
         public static async Task<int> Main(string[] args) => await SynthesisPipeline.Instance
             .AddPatch<IFallout4Mod, IFallout4ModGetter>(RunPatch)
             .SetTypicalOpen(GameRelease.Fallout4, "Synthesis - Cell.esp")
