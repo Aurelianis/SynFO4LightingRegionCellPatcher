@@ -17,16 +17,11 @@ namespace LightingAndRegionPatcher
         {
             Console.WriteLine("CellPatcher - RunPatch - START");
 
-            //Check to see which plugins are enabled
-            //var clarity = state.LoadOrder.GetIfEnabled(Clarity.ModKey);
-            //var uil = state.LoadOrder.GetIfEnabled(UltraInteriorLighting.ModKey);
-            //var regions = state.LoadOrder.GetIfEnabled(RegionNames.ModKey);
-            //var jsrsregions = state.LoadOrder.GetIfEnabled(JSRSRegions.ModKey);
-            //var bosstory = state.LoadOrder.GetIfEnabled(BOSStory.ModKey);
             bool clarityActive = state.LoadOrder.ContainsKey(Clarity.ModKey);
             bool uilActive = state.LoadOrder.ContainsKey(UltraInteriorLighting.ModKey);
             bool regionsActive = state.LoadOrder.ContainsKey(RegionNames.ModKey);
             bool jsrsRegionsActive = state.LoadOrder.ContainsKey(JSRSRegions.ModKey);
+            bool dcaRegionsActive = state.LoadOrder.ContainsKey(DiamondCityAmbience.ModKey);
             bool bosStoryActive = state.LoadOrder.ContainsKey(BOSStory.ModKey);
 
             //If Ultra Interior Lighting is Enabled, forward cell lighting records
@@ -224,6 +219,49 @@ namespace LightingAndRegionPatcher
                                         //Compressed flag is removed, so need to make sure it is added back
                                         //Note Synthesis does not currently support this so commenting out for now
                                         //jsrsCellOverride.Fallout4MajorRecordFlags = jsrsCellOverride.Fallout4MajorRecordFlags.SetFlag(Cell.Fallout4MajorRecordFlag.Compressed, true);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            //If Diamond City Ambiance is Enabled, forward Unique region records
+            if (dcaRegionsActive)
+            {
+                var dca = state.LoadOrder.GetIfEnabled(DiamondCityAmbience.ModKey);
+                if (dca.Mod != null)
+                {
+                    Console.WriteLine($"Processing {dca.ModKey}");
+                    foreach (var dcaContext in dca.Mod.EnumerateMajorRecordContexts<ICell, ICellGetter>(state.LinkCache))
+                    {
+                        var dcaCell = dcaContext.Record;
+                        if (dcaContext.Record.Regions != null)
+                        {
+                            var regionRecords = dcaContext.Record.Regions;
+                            if (regionRecords.Count > 0)
+                            {
+                                if (state.LinkCache.TryResolveContext<ICell, ICellGetter>(dcaContext.Record.FormKey, out var regionWinner))
+                                {
+                                    var dcaWinnerCell = regionWinner.Record;
+                                    if (dcaWinnerCell.Regions != null)
+                                    {
+                                        // Check if Regions is already the winning record.
+                                        if (dcaWinnerCell.Regions == dcaCell.Regions)
+                                        {
+                                            Console.WriteLine($"Skipping, Diamond City Ambiance is already winning.");
+                                            continue;
+                                        }
+                                    }
+                                    var dcaCellOverride = regionWinner.GetOrAddAsOverride(state.PatchMod);
+                                    if (dcaCellOverride.Regions != null)
+                                    {
+                                        //Add only region records that are unique so that there are no duplicates
+                                        dcaCellOverride.Regions.AddRangeIfUnique(dcaContext.Record.Regions);
+
+                                        //Compressed flag is removed, so need to make sure it is added back
+                                        //Note Synthesis does not currently support this so commenting out for now
+                                        // dcaCellOverride.MajorFlags.SetFlag(Cell.Fallout4MajorRecordFlag.Compressed, true);
                                     }
                                 }
                             }
