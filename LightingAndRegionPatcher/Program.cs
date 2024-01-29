@@ -97,7 +97,7 @@ namespace LightingAndRegionPatcher
                 var clarity = state.LoadOrder.GetIfEnabled(Clarity.ModKey);
                 if (clarity.Mod != null)
                 {
-                    Console.WriteLine($"Processing {clarity.ModKey}");
+                    Console.WriteLine($"Processing {Clarity.ModKey}");
                     foreach (var clarityContext in clarity.Mod.EnumerateMajorRecordContexts<ICell, ICellGetter>(state.LinkCache))
                     {
                         var clarityCell = clarityContext.Record;
@@ -147,7 +147,7 @@ namespace LightingAndRegionPatcher
                 var regions = state.LoadOrder.GetIfEnabled(RegionNames.ModKey);
                 if (regions.Mod != null)
                 {
-                    Console.WriteLine($"Processing {regions.ModKey}");
+                    Console.WriteLine($"Processing {RegionNames.ModKey}");
                     foreach (var regionContext in regions.Mod.EnumerateMajorRecordContexts<ICell, ICellGetter>(state.LinkCache))
                     {
                         var regionCell = regionContext.Record;
@@ -190,7 +190,7 @@ namespace LightingAndRegionPatcher
                 var jsrsregions = state.LoadOrder.GetIfEnabled(JSRSRegions.ModKey);
                 if (jsrsregions.Mod != null)
                 {
-                    Console.WriteLine($"Processing {jsrsregions.ModKey}");
+                    Console.WriteLine($"Processing {JSRSRegions.ModKey}");
                     foreach (var jsrsRegionContext in jsrsregions.Mod.EnumerateMajorRecordContexts<ICell, ICellGetter>(state.LinkCache))
                     {
                         var jsrsCell = jsrsRegionContext.Record;
@@ -232,7 +232,7 @@ namespace LightingAndRegionPatcher
                 var dca = state.LoadOrder.GetIfEnabled(DiamondCityAmbience.ModKey);
                 if (dca.Mod != null)
                 {
-                    Console.WriteLine($"Processing {dca.ModKey}");
+                    Console.WriteLine($"Processing {DiamondCityAmbience.ModKey}");
                     foreach (var dcaContext in dca.Mod.EnumerateMajorRecordContexts<ICell, ICellGetter>(state.LinkCache))
                     {
                         var dcaCell = dcaContext.Record;
@@ -275,7 +275,7 @@ namespace LightingAndRegionPatcher
                 var bosstory = state.LoadOrder.GetIfEnabled(BOSStory.ModKey);
                 if (bosstory.Mod != null)
                 {
-                    Console.WriteLine($"Processing {bosstory.ModKey}");
+                    Console.WriteLine($"Processing {BOSStory.ModKey}");
                     foreach (var cellContext in bosstory.Mod.EnumerateMajorRecordContexts<ICell, ICellGetter>(state.LinkCache))
                     {
                         var cell = cellContext.Record;
